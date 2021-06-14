@@ -1,0 +1,91 @@
+        :root {
+    --gradient: linear-gradient( rgb(99, 162, 207), rgb(110, 155, 98));
+}
+
+.container {
+    /* color: rgb(110, 155, 98); */
+    /* background-color: bisque; */
+    margin: 5rem auto 0;
+    width: fit-content;
+    padding: 1rem;
+    background-image: var(--gradient);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body-left {
+    text-align: center;
+}
+
+.image {
+    border-radius: 50%;
+    width:170;
+    height:170;
+}
+
+.social-media-item {
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.social-media-item:hover {
+    opacity: 1;
+}
+
+.social-media-items {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* padding-right: 40px; */
+    padding-inline-start: 0;
+    /* to remove default padding of right*/
+}
+
+.card-body-right {
+    text-align: center;
+    width: 18rem;
+    word-wrap: break-word;
+    /* stops overflowing of word if its too long and breaks the word*/
+}
+
+.name {
+    font-size: 2rem;
+}
+
+.name::after {
+    content: '';
+    display: block;
+    width: inherit;
+    margin-top: 1rem;
+    height: 1px;
+    background-color: rgba(155, 228, 183, 0.5);
+}
+
+.profession {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.description {
+    font-size: 1.125rem;
+}
+
+@media (min-width:700px) {
+     .container {
+        flex-direction: row;
+        margin-top:10rem;
+    }
+    .card-body-left {
+        margin-right: 2rem;
+       
+    }
+    .card-body-right{
+        text-align: left;
+    }
+    .image {
+        width: 150px;
+        
+    }
+    
+}
